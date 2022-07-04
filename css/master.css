@@ -1,0 +1,563 @@
+:root {
+  --color1: rgb(247, 51, 60);
+  --color2: rgb(243, 243, 243);
+  --color3: rgb(14, 14, 14);
+  --color4: rgb(26, 26, 26);
+}
+
+.landing {
+  height: 100vh;
+  background-image: url("../images/wallpaperflare.casddasom_wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color3);
+  z-index: 1;
+  opacity: 0.3;
+}
+
+
+/* nav style */
+
+nav {
+  position: relative;
+  align-items: center;
+  border-bottom: 1px solid var(--color2);
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  font-size: 12px ;
+  font-weight: bold;
+  z-index: 2;
+}
+
+nav .logo {
+  background-color: var(--color1);
+  padding: 10px;
+  width: 110px;
+  text-align: center;
+
+}
+
+nav .search {
+  margin-left: 50px;
+  color: var(--color2);
+}
+
+nav .search input {
+  
+  background-color: transparent;
+  border-color: transparent;
+  outline: transparent;
+  color: var(--color2);
+  margin-left: 15px;
+
+}
+
+nav .logo img {
+  width: 70px;
+}
+
+nav .menu {
+  margin-left: 100px;
+}
+
+nav .menu ul li {
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+}
+
+nav .menu ul li::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: var(--color1);
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+
+
+nav .menu ul li:hover::after{
+  width: 100%;
+}
+
+nav .menu ul li a {
+  color: white;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+nav .menu ul li:hover a {
+  color: var(--color1);
+}
+
+nav .menu ul li a i {
+  margin-left: 5px;
+}
+
+nav .menu ul li:last-child a,nav .menu ul li:nth-child(5) a{
+  color: var(--color1);
+}
+
+nav .menu ul li:nth-child(5)::after {
+  background-color: var(--color2);
+
+}
+
+nav .menu ul li:nth-child(5):hover a {
+  color: var(--color2);
+}
+
+nav .menu ul li:last-child {
+  border-left: 1px solid var(--color2);
+  font-size: 15px;
+}
+
+nav .menu ul li:last-child:hover::after{
+  width: 0;
+}
+
+nav .menu ul li:last-child a i {
+  position: relative;
+}
+
+nav .menu ul li:last-child a i span {
+  background-color: var(--color2);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  top: -7px;
+  left: 10px;
+  font-size: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* end nav style */
+
+
+/* sections style */
+
+.landing .sections {
+  position: relative;
+  z-index: 2;
+  padding-top: 30px;
+  padding-left: 0px;
+  font-weight: bold;
+
+}
+
+.landing .sections ul {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing .sections ul li a {
+  color: var(--color2);
+  font-size: 12px;
+}
+
+/* end sections style */
+
+/* intro text */
+
+.landing .intro {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  color: var(--color2);
+}
+
+.landing .intro h1 {
+  font-size: 35pt;
+}
+
+.landing .intro p {
+  font-size: 12px;
+  width: 50%;
+  line-height:15pt;
+}
+
+.landing .intro .btn {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: var(--color1);
+  margin-top: 15px;
+  padding:15px 20px;
+  transition: all 0.3s ease ;
+  -webkit-transition: all 0.3s ease-out ;
+  -moz-transition: all 0.3s ease ;
+  -ms-transition: all 0.3s ease ;
+  -o-transition: all 0.3s ease ;
+
+}
+
+.landing .intro .btn::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  background-color: var(--color4);
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease ;
+  -webkit-transition: all 0.3s ease ;
+  -moz-transition: all 0.3s ease ;
+  -ms-transition: all 0.3s ease ;
+  -o-transition: all 0.3s ease ;
+}
+
+
+.landing .intro .btn i {
+  margin-left: 20px;
+}
+
+.landing .intro .btn:hover {
+  background-color: transparent;
+}
+
+.landing .intro .btn:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.landing .intro .btn:hover i {
+  animation-name: arrowbounc;
+  animation-duration:0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes arrowbounc {
+  to {
+    margin-left: 10px;
+  }
+}
+
+/* end intro text */
+
+/* mouse icon */
+
+.scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  text-align: center;
+  width: fit-content;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.scroll .mouse-body {
+  position: relative;
+  width: 20px;
+  height: 30px;
+  border: 2px solid var(--color2);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  /* justify-content: center; */
+
+}
+
+.scroll .mouse-body .mouse-pointer {
+  width: 5px;
+  height: 5px;
+  background-color: var(--color2);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.scroll h6 {
+  margin-top: 5px;
+  color: var(--color2);
+}
+
+.scroll:hover {
+  opacity: 0.7;
+}
+
+.scroll:hover .mouse-pointer {
+  margin-top: 10px;
+}
+
+/* end mouse icon */
+
+/* featured products */
+
+.featured-products {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.featured-products .heading {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--color3);
+}
+
+.featured-products .heading .type {
+  justify-content: space-evenly;
+
+}
+
+.featured-products .heading .check h4 {
+  color: gray;
+}
+
+.featured-products .heading .check input{
+  margin-left: 10px;
+  
+}
+
+.shoes {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.shoes .container {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  height:fit-content;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 1px var(--color4);
+  width: 230px;
+  height: 350px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 5px var(--color4);
+}
+
+.card .icons {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.card .icons i {
+  cursor: pointer;
+  color: var(--color3);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.card .icons i:hover {
+  color: var(--color1);
+}
+
+.card .icons i:last-child {
+  color: var(--color1);
+  margin-left: 5px;
+}
+
+.card .icons i:last-child:hover {
+  color: var(--color3);
+}
+
+.card .card-info {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  
+
+}
+
+
+.card .card-info img {
+  width: 150px;
+}
+
+
+
+.card .card-info .text h6 {
+  font-size: 12pt;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.card .card-info .text .line {
+  width: 30px;
+  height: 2px;
+  background-color: var(--color3);
+  margin:15px auto;
+  
+}
+
+.card .card-info .text .price {
+  color: var(--color1);
+}
+
+/* end featured products */
+
+/* start contact */
+
+.contact {
+  background-color: var(--color4);
+  padding-top: 100px;
+  min-height: 70vh;
+}
+
+.contact .container {
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact .contact-info {
+  justify-content: space-between;
+  text-align: left;
+}
+
+.contact .contact-info ul {
+  padding-left: 0;
+}
+
+.contact .contact-info .col {
+  width:200px;
+  color: var(--color2);
+}
+
+.contact .contact-info .col h4 {
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.contact .contact-info .col .icons i {
+  color: gray;
+  margin-right: 15px;
+}
+
+.contact .contact-info .col ul li {
+  font-size: 10pt;
+  margin-bottom: 15px;
+  color: gray;
+}
+
+.contact .contact-info .col p {
+  font-size: 10px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  color: gray;
+}
+
+.contact .contact-info .col .mail {
+  border: 1px solid gray;
+}
+
+.contact .contact-info .col .mail input {
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  width: 70%;
+  padding: 10px;
+  font-size: 10px;
+  color: var(--color2);
+}
+
+.contact .contact-info .col .mail .icon {
+  background-color: var(--color1);
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.contact .contact-info .col .mail .icon:hover {
+  background-color: var(--color2);
+}
+
+.contact .contact-info .col .mail .icon:hover i {
+  color: var(--color1);
+}
+
+footer {
+  border-top: 1px solid var(--color2);
+  height: 150px;
+  margin-top: 150px;
+  padding-top: 30px;
+  color: gray;
+}
+
+footer h4 {
+  font-size: 12px;
+}
+
+/* end contact */

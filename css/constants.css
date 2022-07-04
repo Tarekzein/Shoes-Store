@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  /* padding: 0; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* width: 1170px; */
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  /* color: var(--mainText); */
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:var(--color2);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:var(--color2);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color:var(--color2);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+  ::-webkit-scrollbar-track {
+  background: var(--color3);
+  
+}
+
+/* Handle */
+
+  ::-webkit-scrollbar-thumb {
+    background:var(--color1);
+    
+}
+  /* Handle on hover */
+  
+  ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color2);
+}
+
+/* media queries codes */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+
+.btn,.btn6{
+  padding: 10px 15px;
+  color: var(--mainText);
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display:inline-block;
+  
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  bottom: 50%;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  display: block;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  -moz-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  -ms-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  -o-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+}
+
+.btn:hover::before {
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1)
+}
+
+
+/*=======Button 6============= */
+.btn6{
+  border:1px solid transparent; 
+  -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+}
+
+.btn6::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom:0px;
+  /* z-index:-1; */
+  width: 0%;
+  height:1px;
+  background: var(--color2);
+  box-shadow: inset 0px 0px 0px var(--color2);
+  display: block;
+  -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1)
+}
+
+.btn6:hover::before {
+  width:100%;
+}
+
+.btn6::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top:0px;
+  /*z-index:-1;
+  */width: 0%;
+  height:1px;
+  background: var(--color2);
+  -webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  -moz-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  -ms-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+  -o-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+}
+
+.btn6:hover::after {
+  width:100%;
+}
+
+.btn6:hover{
+  border-left:1px solid var(--color2);
+  border-right:1px solid var(--color2);
+}
+
+.btn6.active:hover {
+  border-left:1px solid var(--color1);
+  border-right:1px solid var(--color1);
+}
+
+.active.btn6::after{
+  background: var(--color1);
+}
+
+.active.btn6::before{
+  background: var(--color1);
+}
+
+.active{
+  color: var(--color1);
+}
+
+/* btn1 style */
+
+.btn1 {
+  background-color: var(--secondaryText);
+
+}
+
+.btn1:hover {
+  color: var(--secondaryText);
+  background-color: var(--mainText);
+}
+
+.special-heading {
+  color: var(--secondaryText);
+  font-size: 50pt;
+  padding-left: 30px;
+  background-color: var(--mainText);
+}
+
+.special-heading h1 {
+  margin-left: -1000px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.special-heading.animate h1 {
+  animation-name: specialHeadAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes specialHeadAnimation {
+  to{
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  
+  .special-heading {
+    font-size: 30pt;
+  }
+
+}
+
+@media screen and (max-width: 660px) {
+  
+  .special-heading {
+    font-size: 20pt;
+  }
+
+}
