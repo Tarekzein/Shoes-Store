@@ -1,9 +1,45 @@
 :root {
-  --color1: rgb(247, 51, 60);
+  --color1: #ff3231;
   --color2: rgb(243, 243, 243);
   --color3: rgb(14, 14, 14);
   --color4: rgb(26, 26, 26);
 }
+
+/* page-up button */
+
+.page-up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  background-color: var(--color1);
+  z-index: 5000;
+  opacity: 0.5;
+  width: 50px;
+  height: 50px;
+  display: none;
+
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.page-up:hover {
+  opacity: 1;
+}
+
+
+.page-up div i {
+  color: var(--color2);
+  font-size: 14pt;
+}
+
+/* end page-up button */
 
 .landing {
   height: 100vh;
@@ -30,12 +66,13 @@
 nav {
   position: relative;
   align-items: center;
-  border-bottom: 1px solid var(--color2);
+  border-bottom: 1px solid #555;
   padding-left: 0 !important;
   padding-right: 0 !important;
   font-size: 12px ;
   font-weight: bold;
   z-index: 2;
+  /* justify-content: space-between; */
 }
 
 nav .logo {
@@ -65,18 +102,18 @@ nav .logo img {
   width: 70px;
 }
 
-nav .menu {
+.menu {
   margin-left: 100px;
 }
 
-nav .menu ul li {
+.menu ul li {
   display: inline-block;
   margin-left: 15px;
   margin-right: 15px;
   position: relative;
 }
 
-nav .menu ul li::after {
+.menu ul li::after {
   content: "";
   width: 0%;
   height: 1px;
@@ -93,11 +130,11 @@ nav .menu ul li::after {
 
 
 
-nav .menu ul li:hover::after{
+.menu ul li:hover::after{
   width: 100%;
 }
 
-nav .menu ul li a {
+.menu ul li a {
   color: white;
   transition: 0.3s;
   -webkit-transition: 0.3s;
@@ -106,41 +143,43 @@ nav .menu ul li a {
   -o-transition: 0.3s;
 }
 
-nav .menu ul li:hover a {
+
+
+.menu ul li:hover a {
   color: var(--color1);
 }
 
-nav .menu ul li a i {
+.menu ul li a i {
   margin-left: 5px;
 }
 
-nav .menu ul li:last-child a,nav .menu ul li:nth-child(5) a{
+.menu ul li:last-child a,nav .menu ul li:nth-child(5) a{
   color: var(--color1);
 }
 
-nav .menu ul li:nth-child(5)::after {
+.menu ul li:nth-child(5)::after {
   background-color: var(--color2);
 
 }
 
-nav .menu ul li:nth-child(5):hover a {
+.menu ul li:nth-child(5):hover a {
   color: var(--color2);
 }
 
-nav .menu ul li:last-child {
-  border-left: 1px solid var(--color2);
+.menu ul li:last-child {
+  border-left: 1px solid #555;
   font-size: 15px;
 }
 
-nav .menu ul li:last-child:hover::after{
+.menu ul li:last-child:hover::after{
   width: 0;
 }
 
-nav .menu ul li:last-child a i {
+.menu ul li:last-child a i {
   position: relative;
 }
 
-nav .menu ul li:last-child a i span {
+.menu ul li:last-child a i span {
   background-color: var(--color2);
   width: 15px;
   height: 15px;
@@ -155,6 +194,50 @@ nav .menu ul li:last-child a i span {
   font-size: 10px;
   justify-content: center;
   align-items: center;
+}
+
+#list {
+  position: relative;
+}
+
+
+
+.menu .sub-menu {
+  background-color: var(--color2);
+  position: absolute;
+  padding-left: 0px;
+  z-index: 3;
+  margin-top: 5px;
+  display:none ;
+
+}
+
+.menu .sub-menu li {
+  display: block;
+  margin: 20px;
+  text-align: center;
+  font-size: 10pt;
+}
+
+.menu .sub-menu li a {
+  color: var(--color1);
+  
+}
+
+@media screen and (max-width: 1020px) {
+  nav .menu{
+    display: none;
+  }
+}
+
+@media screen and (max-width:400px) {
+  nav .search {
+    font-size: 10px;
+  }
+  
+  nav .search input {
+    margin-left: 5px;
+  }
 }
 
 /* end nav style */
@@ -176,14 +259,28 @@ nav .menu ul li:last-child a i span {
   align-items: center;
 }
 
+.landing .sections ul li {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
 .landing .sections ul li a {
   color: var(--color2);
   font-size: 12px;
 }
 
+@media screen and (max-width:400px) {
+  .landing .sections ul li a {
+    font-size: 9px;
+  }
+}
+
 /* end sections style */
 
 /* intro text */
+
+
 
 .landing .intro {
   position: absolute;
@@ -204,67 +301,35 @@ nav .menu ul li:last-child a i span {
 
 .landing .intro p {
   font-size: 12px;
-  width: 50%;
+  
   line-height:15pt;
 }
 
-.landing .intro .btn {
-  position: relative;
-  z-index: 1;
-  font-size: 12px;
-  font-weight: bold;
-  background-color: var(--color1);
-  margin-top: 15px;
-  padding:15px 20px;
-  transition: all 0.3s ease ;
-  -webkit-transition: all 0.3s ease-out ;
-  -moz-transition: all 0.3s ease ;
-  -ms-transition: all 0.3s ease ;
-  -o-transition: all 0.3s ease ;
 
-}
-
-.landing .intro .btn::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 100%;
-  z-index: -1;
-  background-color: var(--color4);
-  top: 0;
-  right: 0;
-  transition: all 0.3s ease ;
-  -webkit-transition: all 0.3s ease ;
-  -moz-transition: all 0.3s ease ;
-  -ms-transition: all 0.3s ease ;
-  -o-transition: all 0.3s ease ;
-}
-
-
-.landing .intro .btn i {
-  margin-left: 20px;
-}
-
-.landing .intro .btn:hover {
-  background-color: transparent;
-}
-
-.landing .intro .btn:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-.landing .intro .btn:hover i {
-  animation-name: arrowbounc;
-  animation-duration:0.3s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes arrowbounc {
-  to {
-    margin-left: 10px;
+@media screen and (max-width:720px) {
+  .landing .intro h1 {
+    font-size: 25pt;
   }
+
+  .landing .intro p{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .landing .intro h1 {
+    font-size: 15pt;
+  }
+
+  .landing .intro p{
+    font-size: 9px;
+  }
+
+  .landing .intro .btn {
+    padding:10px 15px;
+    font-size: 10px;
+  }
+
 }
 
 /* end intro text */
@@ -284,6 +349,7 @@ nav .menu ul li:last-child a i span {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+  transform: translate(-50%,-50%);
 }
 
 .scroll .mouse-body {
@@ -303,8 +369,8 @@ nav .menu ul li:last-child a i span {
 }
 
 .scroll .mouse-body .mouse-pointer {
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   background-color: var(--color2);
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -365,14 +431,22 @@ nav .menu ul li:last-child a i span {
   
 }
 
+@media screen and (max-width:400px) {
+
+  .featured-products .heading h1 {
+    font-size: 20pt ;
+  }
+}
+
+
 .shoes {
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 0;
 }
 
 .shoes .container {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  /* border-top: 1px solid black;
+  border-bottom: 1px solid black; */
   padding-left: 0 !important;
   padding-right: 0 !important;
   height:fit-content;
@@ -383,7 +457,8 @@ nav .menu ul li:last-child a i span {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 0 1px var(--color4);
+  margin-bottom: 10px;
+  box-shadow: 0 0 1px gray;
   width: 230px;
   height: 350px;
   transition: 0.3s;
@@ -394,7 +469,7 @@ nav .menu ul li:last-child a i span {
 }
 
 .card:hover {
-  box-shadow: 0 0 5px var(--color4);
+  box-shadow: 0 0 5px gray;
 }
 
 .card .icons {
@@ -461,6 +536,151 @@ nav .menu ul li:last-child a i span {
   color: var(--color1);
 }
 
+/* adds  */
+
+.adds .season-mustHave {
+  position: relative;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+.adds .season-mustHave .number {
+  top: -40px;
+  left: -20px;
+}
+
+.adds .season-mustHave .addCard {
+  width: 250px;
+  position: relative;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adds .season-mustHave .addCard .line {
+  margin-left: 0;
+}
+
+.adds .season-mustHave .slider {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.adds .season-mustHave .slider .arrow {
+  background-color:var(--color2);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.adds .season-mustHave .slider .arrow:hover {
+  background-color: var(--color1);
+}
+
+.adds .season-mustHave .slider .arrow:hover i {
+  color: var(--color2);
+}
+
+.adds .season-mustHave .slider .arrow.left {
+  top: 40%;
+  left: -30px;
+}
+
+.adds .season-mustHave .slider .arrow.right {
+  top: 40%;
+  right: -30px;
+}
+
+.adds .season-mustHave .slider .shirt img {
+  width: 200px;
+}
+
+.adds .season-mustHave .slider .shirt h5 {
+  text-align: center;
+  font-weight: bold;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adds .season-mustHave .slider .shapes {
+
+  text-align: center;
+}
+
+.adds .season-mustHave .slider .shapes div {
+  background-color: gray;
+  width: 20px;
+  height: 2px;
+  display: inline-block;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.adds .season-mustHave .slider .shapes .active {
+  background-color: var(--color1);
+}
+
+.adds .season-mustHave .slider #price {
+  color: var(--color1);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.adds .skate-add {
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 1px gray;
+  width: fit-content;
+  height: 400px;
+  align-items: center;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+
+.adds .skate-add:hover {
+  box-shadow: 0 0 10px gray;
+}
+
+.adds .skate-add .addCard {
+  width: 250px;
+  position: relative;
+  padding: 5px;
+}
+
+.adds .skate-add .addCard .number {
+  top: -40px;
+  left: -20px;
+}
+
+.adds .skate-add .addCard .line {
+  margin-left: 0;
+}
+
 /* end featured products */
 
 /* start contact */
@@ -489,6 +709,9 @@ nav .menu ul li:last-child a i span {
 .contact .contact-info .col {
   width:200px;
   color: var(--color2);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
 }
 
 .contact .contact-info .col h4 {
@@ -515,7 +738,7 @@ nav .menu ul li:last-child a i span {
 }
 
 .contact .contact-info .col .mail {
-  border: 1px solid gray;
+  border: 1px solid #333;
 }
 
 .contact .contact-info .col .mail input {
@@ -554,10 +777,37 @@ footer {
   margin-top: 150px;
   padding-top: 30px;
   color: gray;
+  justify-content: space-between;
+  align-items: center;
 }
 
 footer h4 {
   font-size: 12px;
+  
+}
+
+
+footer .visa .img {
+  width: 80px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 3px;
+  
+  margin:5px 10px;
+  background-color: var(--color2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .visa .img:last-child {
+  background-color:#89207A ;
+}
+
+footer .visa .img img {
+  width: 50px;
+
 }
 
 /* end contact */
+

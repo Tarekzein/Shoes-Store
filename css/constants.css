@@ -261,3 +261,198 @@ a {
   }
 
 }
+
+
+.menu-icon {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  z-index: 3000;
+  right:30px;
+  top: 15px;
+}
+
+.menu-icon div {
+  width: 35px;
+  height: 5px;
+  background-color: var(--color1);
+  margin: 6px 0;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+  -moz-transform: rotate(-45deg) translate(-9px, 6px);
+  -ms-transform: rotate(-45deg) translate(-9px, 6px);
+  -o-transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media screen and (max-width: 1020px) {
+  .menu-icon {
+    display: block;
+  }
+
+}
+
+@media screen and (max-width:400px) {
+  .menu-icon div {
+    width: 25px;
+    height: 3px;
+  }
+}
+
+.vertical-menu {
+  position: fixed;
+  background-color: var(--color4);
+  padding: 50px;
+  right:-1000px;
+  top: 0px;
+  min-height: 100vh;
+  /* border-radius: 15px; */
+  z-index: 3000;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+
+.vertical-menu .menu {
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+  margin-left: 0;
+}
+
+.vertical-menu .menu li {
+  display: block;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.vertical-menu .menu li a {
+  color: var(--color2);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.vertical-menu .menu li a:hover,
+.vertical-menu .menu li a.active {
+  color: var(--color1);
+}
+
+.vertical-menu .fa-xmark {
+  color: var(--color1);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  font-size: 30pt;
+  cursor: pointer;
+}
+
+
+.btn2 {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  color: var(--color2);
+  font-weight: bold;
+  background-color: var(--color1);
+  margin-top: 15px;
+  padding:15px 20px;
+  transition: all 0.3s ease ;
+  -webkit-transition: all 0.3s ease-out ;
+  -moz-transition: all 0.3s ease ;
+  -ms-transition: all 0.3s ease ;
+  -o-transition: all 0.3s ease ;
+
+}
+
+.btn2::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  background-color: var(--color4);
+  top: 0;
+  right: 0;
+  transition: all 0.3s ease ;
+  -webkit-transition: all 0.3s ease ;
+  -moz-transition: all 0.3s ease ;
+  -ms-transition: all 0.3s ease ;
+  -o-transition: all 0.3s ease ;
+}
+
+
+.btn2 i {
+  margin-left: 20px;
+}
+
+.btn2:hover {
+  background-color: transparent;
+}
+
+.btn2:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.btn2:hover i {
+  animation-name: arrowbounc;
+  animation-duration:0.3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes arrowbounc {
+  to {
+    margin-left: 10px;
+  }
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  background-color: var(--color3);
+  margin:15px auto;
+  
+}
+
+.number {
+  font-size: 40pt;
+  position: absolute;
+  z-index: -1;
+  color: gray;
+  opacity: 0.1;
+  
+}

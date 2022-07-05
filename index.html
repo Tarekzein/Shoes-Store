@@ -12,6 +12,54 @@
   </head>
   <body>
     <div class="parent">
+      <!-- page-up button -->
+      <div class="page-up">
+        <div>
+          <i class="fa-solid fa-angle-up"></i>
+        </div>
+      </div>
+      <!-- end page-up button -->
+
+      <!-- vertical menu -->
+      <div class="menu-icon">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <div class="vertical-menu">
+        <i class="fa-solid fa-xmark"></i>
+        <ul class="menu">
+          <li id="list">
+            <a href="#"
+              >REST OF EUROPE <i class="fa-solid fa-angle-down"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              >Store Locator <i class="fa-solid fa-location-dot"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#">Help <i class="fa-solid fa-circle-question"></i></a>
+          </li>
+          <li>
+            <a href="#">Login <i class="fa-solid fa-lock"></i></a>
+          </li>
+          <li>
+            <a href="#">Register <i class="fa-solid fa-user-plus"></i></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-cart-shopping">
+                <span class="flex"><h4>0</h4></span>
+              </i></a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- end vertical menu -->
+
       <!-- start landing -->
       <div class="landing">
         <div class="overlay"></div>
@@ -19,7 +67,7 @@
         <!-- start nav -->
         <nav class="container flex">
           <div class="logo">
-            <img src="images/vansLogo-01-01.svg" alt="" />
+            <a href="#"><img src="images/vansLogo-01-01.svg" alt="" /></a>
           </div>
 
           <div class="search">
@@ -31,10 +79,17 @@
 
           <div class="menu">
             <ul>
-              <li>
+              <li id="list">
                 <a href="#"
                   >REST OF EUROPE <i class="fa-solid fa-angle-down"></i>
                 </a>
+
+                <ul class="sub-menu">
+                  <li><a href="#">England</a></li>
+                  <li><a href="#">France</a></li>
+                  <li><a href="#">Germany</a></li>
+                  <li><a href="#">Russia</a></li>
+                </ul>
               </li>
               <li>
                 <a href="#"
@@ -80,7 +135,7 @@
             introduced in 1977, the style #36. now known as old skool, was the
             first vans shoe to feature the iconic sidestripe
           </p>
-          <a href="#" class="btn"
+          <a href="#" class="btn btn2"
             >Discover now <i class="fa-solid fa-angle-right"></i
           ></a>
         </div>
@@ -204,6 +259,65 @@
             </div>
           </div>
         </div>
+
+        <div class="adds">
+          <div class="container flex">
+            <div class="season-mustHave flex">
+              <div class="addCard">
+                <h1 class="number">01</h1>
+                <h1>This season's must-have</h1>
+                <div class="line"></div>
+                <a href="#" class="btn btn2"
+                  >shop now <i class="fa-solid fa-angle-right"></i
+                ></a>
+              </div>
+
+              <div class="slider">
+                <div class="arrow left" onclick="plusDivs(-1)">
+                  <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="arrow right" onclick="plusDivs(1)">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
+
+                <div class="shirt" data-price="19.99">
+                  <img src="images/t-shirt1-removebg-preview.png" alt="" />
+                  <h5 class="shirt-info">Sea t-shirt for summer</h5>
+                </div>
+
+                <div class="shirt" data-price="18.99">
+                  <img src="images/t-shirt2-removebg-preview.png" alt="" />
+                  <h5 class="shirt-info">sky mood shirt</h5>
+                </div>
+
+                <div class="shirt" data-price="11.99">
+                  <img src="images/t-shirt3-removebg-preview.png" alt="" />
+                  <h5 class="shirt-info">black and gray shirt</h5>
+                </div>
+
+                <div class="shapes">
+                  <div></div>
+                  <div class="active"></div>
+                  <div></div>
+                </div>
+
+                <h5 id="price">&euro;<span>19.99</span></h5>
+              </div>
+            </div>
+
+            <div class="skate-add flex">
+              <div class="addCard">
+                <h1 class="number">02</h1>
+                <h1>new arrivals pro skate</h1>
+                <div class="line"></div>
+                <a href="#" class="btn btn2"
+                  >shop now <i class="fa-solid fa-angle-right"></i
+                ></a>
+              </div>
+              <img src="images/skater-removebg-preview.png" alt="" />
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- end products -->
@@ -264,12 +378,26 @@
 
           <footer class="flex">
             <h4>&copy;2016 vans - all rights reserved</h4>
-            <div class="visa"></div>
+            <div class="visa flex">
+              <div class="img">
+                <img src="images/visa-removebg-preview.png" alt="" />
+              </div>
+              <div class="img">
+                <img src="images/mastercard-removebg-preview.png" alt="" />
+              </div>
+              <div class="img">
+                <img src="images/paypal-removebg-preview.png" alt="" />
+              </div>
+              <div class="img">
+                <img src="images/skrill-removebg-preview.png" alt="" />
+              </div>
+            </div>
           </footer>
         </div>
       </div>
 
       <!-- end footer -->
     </div>
+    <script src="js/app.js"></script>
   </body>
 </html>
