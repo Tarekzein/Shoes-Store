@@ -681,6 +681,129 @@ nav .logo img {
   margin-left: 0;
 }
 
+/* second add */
+
+.adds .cards {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adds .cards .card {
+  position: relative;
+  padding: 15px 20px ;
+}
+
+.adds .cards .card .card-head {
+  justify-content: space-between;
+  color: gray;
+  opacity: 0.6;
+  transition: 0.3s;
+  -webkit-transition: 0.3;
+  -moz-transition: 0.3;
+  -ms-transition: 0.3;
+  -o-transition: 0.3;
+}
+
+.adds .cards .card .card-head .icon i {
+  font-size: 10pt;
+  transition: 0.3s;
+  -webkit-transition: 0.3;
+  -moz-transition: 0.3;
+  -ms-transition: 0.3;
+  -o-transition: 0.3;
+}
+
+.adds .cards .card .card-head .icon h6 {
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.adds .cards .card:hover .card-head {
+  opacity: 1;
+}
+
+.adds .cards .card:hover .card-head i {
+  color: var(--color1);
+}
+
+.adds .cards .card .card-body {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+}
+
+.adds .cards .card .card-body .img {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.adds .cards .card .card-body .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.adds .cards .card .card-body .text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;
+  font-size: 10px;
+}
+
+.adds .cards .card .card-body a {
+  color: var(--color1);
+  font-size: 12px;
+  text-decoration: underline;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.adds .cards .card .card-body a:hover {
+  color: var(--color4);
+}
+
+.adds .cards .card .number {
+  font-size: 15px;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.6;
+  transition: 0.3s;
+  -webkit-transition: 0.3;
+  -moz-transition: 0.3;
+  -ms-transition: 0.3;
+  -o-transition: 0.3;
+}
+
+.adds .cards .card:hover .number {
+  opacity: 1;
+}
+
+.shoes-add {
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: none !important;
+}
+
+
+
+.shoes-add img {
+  width: 120px;
+}
+
 /* end featured products */
 
 /* start contact */
