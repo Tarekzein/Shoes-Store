@@ -67,8 +67,25 @@ else {
   }
 }
 
+// featured products section animation
+
+
+function animateFeatSection() {
+  let featSection = document.querySelector(".featured-products .heading");
+  
+  let featHeight = featSection.offsetHeight;
+  let featTop = featSection.offsetTop;
+  let windowHeight = this.innerHeight;
+  let windowTop = this.pageYOffset;
+
+  if (windowTop >= (featHeight + featTop) - windowHeight) {
+    featSection.parentElement.classList.add("featuredFade");
+  }
+
+}
 
 // on scrolling 
 window.onscroll = () => {
   pageBtnStat();
+  animateFeatSection();
 }
