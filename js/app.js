@@ -1,3 +1,4 @@
+
 // menu icon change
 
 let menuIcon = document.querySelector(".menu-icon");
@@ -69,7 +70,6 @@ else {
 
 // featured products section animation
 
-
 function animateFeatSection() {
   let featSection = document.querySelector(".featured-products .heading");
   
@@ -84,8 +84,58 @@ function animateFeatSection() {
 
 }
 
+function animateShoesCards() {
+  let shoes = document.querySelector(".shoes");
+  
+  let shoesHeight = shoes.offsetHeight;
+  let shoesTop = shoes.offsetTop;
+  let windowHeight = this.innerHeight;
+  let windowTop = this.pageYOffset;
+  let cards = document.querySelectorAll(".shoes .card");
+
+  if (windowTop >= (shoesHeight + shoesTop) - windowHeight) {
+    
+    
+    for (let i = 1; i <= cards.length; i++){
+      setTimeout(function timer() {
+        
+        cards[i-1].classList.add("featuredFade");
+
+      }, i * 300);
+    }
+    
+
+  }
+}
+
+function animateAdds() {
+  let add = document.querySelector(".adds");
+  let adds = document.querySelectorAll(".adds");
+
+  let addHeight = add.offsetHeight;
+  let addTop = add.offsetTop;
+  let windowHeight = this.innerHeight;
+  let windowTop = this.pageYOffset;
+
+
+  if (windowTop >= (addHeight + addTop) - windowHeight) {
+    
+    for (let i = 1; i <= adds.length; i++){
+      setTimeout(function timer() {
+        
+        adds[i-1].classList.add("featuredFade");
+
+      }, i * 500);
+    }
+    
+  }
+}
+
+
 // on scrolling 
 window.onscroll = () => {
   pageBtnStat();
   animateFeatSection();
+  animateShoesCards();
+  animateAdds();
 }
