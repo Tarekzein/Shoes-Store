@@ -86,7 +86,7 @@ function animateFeatSection() {
 
 function animateShoesCards() {
   let shoes = document.querySelector(".shoes");
-  
+  let firstShoe = shoes[0];
   let shoesHeight = shoes.offsetHeight;
   let shoesTop = shoes.offsetTop;
   let windowHeight = this.innerHeight;
@@ -136,6 +136,5 @@ function animateAdds() {
 window.onscroll = () => {
   pageBtnStat();
   animateFeatSection();
-  animateShoesCards();
-  animateAdds();
+  
 }

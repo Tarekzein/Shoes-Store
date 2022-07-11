@@ -201,16 +201,54 @@ nav .logo img {
   position: relative;
 }
 
+.rotate {
+  -moz-transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
+}
+.rotate.down {
+  transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  -o-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+}
 
 
 .menu .sub-menu {
-  background-color: var(--color2);
-  position: absolute;
+  background-color: var(--color4);
   padding-left: 0px;
-  z-index: 3;
+  position: absolute;
   margin-top: 5px;
+  z-index: 3000;
   display:none ;
+  width: 100%;
 
+}
+
+.vertical-menu .menu .sub-menu {
+  position: relative;
+}
+
+#sub-menu li {
+  border: none;
+  
+}
+
+#sub-menu li a {
+  color: var(--color2) ;
+  font-weight: bold;
+
+}
+
+#sub-menu li:hover a {
+  color: var(--color1);
+}
+
+#sub-menu li:hover::after {
+  width: 0 !important;
 }
 
 .menu .sub-menu li {
@@ -224,6 +262,7 @@ nav .logo img {
   color: var(--color1);
   
 }
+
 
 @media screen and (max-width: 1020px) {
   nav .menu{
@@ -248,7 +287,7 @@ nav .logo img {
 
 .landing .sections {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   padding-top: 30px;
   padding-left: 0px;
   font-weight: bold;
@@ -461,10 +500,6 @@ nav .logo img {
   justify-content: space-between;
 }
 
-.shoes .card {
-  opacity: 0;
-}
-
 .card {
   position: relative;
   margin-left: auto;
@@ -550,9 +585,6 @@ nav .logo img {
 
 /* adds  */
 
-.adds {
-  opacity: 0;
-}
 
 .adds .season-mustHave {
   position: relative;
@@ -623,6 +655,14 @@ nav .logo img {
 .adds .season-mustHave .slider .arrow.right {
   top: 40%;
   right: -30px;
+}
+
+.adds .season-mustHave .slider .shirt {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
 }
 
 .adds .season-mustHave .slider .shirt img {
